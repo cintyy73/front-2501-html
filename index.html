@@ -4,40 +4,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clase N°1</title>
+    <title>Clase 03</title>
 </head>
 
 <body>
 
-    <div>
-        <h1>Clase 01</h1>
-        <h2>Tìtulo 2</h2>
-        <h3>Tìtulo 3</h3>
-        <h4>Tìtulo 4</h4>
-        <h5>Tìtulo 5</h5>
-        <h6>Tìtulo 6</h6>
-        <p>Etiqueta de apertura y cierre (pàrrafo)</p>
-      
-         <a href="https://docs.google.com/presentation/d/1J-02RMm9Rh_PZwZJ06Pu2JIIpstKoxsy/edit?userstoinvite=georginasolbarroso%40gmail.com&sharingaction=manageaccess&role=writer&slide=id.p38#slide=id.p38" target="_blank">Link a diapositivas</a>
+    <!-- Encabezado principal del sitio -->
+    <header>
+        <h1>Mi Blog de Desarrollo Web</h1>
 
-    </div>
-    <h2>Frutas enumeradas</h2>
-    <ol>
-        <li>Ananá</li>
-        <li>Manzana</li>
-        <li>Durazno</li>
-        <li>Pera</li>
-    </ol>
-    <h2>Frutas</h2>
-    <ul>
-        <li>Ananá</li>
-        <li>Manzana</li>
-        <li>Durazno</li>
-        <li>🍐 Pera</li>
-    </ul>
+        <!-- Menú de navegación principal -->
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#articulos">Artículos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
-      <img src="https://img.freepik.com/foto-gratis/retrato-perro-adorable-mirando-arriba_23-2148366909.jpg?semt=ais_hybrid&w=740" alt="Imágen de perro" whidt="300" height="300" /> 
+    <!-- Contenido principal del documento -->
+    <main>
 
+        <!-- Sección de artículos -->
+        <section id="articulos">
+
+            <!-- Un artículo individual -->
+            <article>
+
+                <!-- Encabezado del artículo -->
+                <header>
+                    <h2>¿Qué es HTML Semántico?</h2>
+                </header>
+
+                <!-- Párrafo con etiquetas semánticas resaltadas -->
+                <p>
+                    El uso de etiquetas como <strong>&lt;section&gt;</strong> y
+                    <em>&lt;article&gt;</em> mejora la accesibilidad y el SEO.
+                </p>
+
+                <!-- Cita larga con fuente -->
+                <blockquote cite="https://developer.mozilla.org">
+                    “El HTML semántico permite a los navegadores y usuarios comprender mejor el contenido de una
+                    página.”
+                </blockquote>
+                <cite>MDN Web Docs</cite>
+
+                <!-- Imagen con leyenda -->
+                <figure>
+                    <img src="assets/semantic_1.jpg" alt="Ejemplo de código HTML">
+                    <figcaption>Figura 1: Ejemplo de etiqueta semántica en acción</figcaption>
+                </figure>
+
+                <!-- Cita corta en línea -->
+                <p>
+                    Según los expertos, <q>las etiquetas semánticas son fundamentales para el desarrollo moderno</q>.
+                </p>
+
+                <!-- Pie del artículo -->
+                <footer>
+                    <p>Publicado el 1 de mayo de 2025</p>
+                </footer>
+            </article>
+        </section>
+
+        <!-- Sección de la clase 03 con imágenes comparativas -->
+        <section id="clase03">
+            <h1>Clase 03</h1>
+            <h3>HTML semántico</h3>
+
+            <!-- Varias imágenes agrupadas dentro de un solo figure -->
+            <figure>
+                <img src="assets/semantic_2.jpg" alt="Estructura de blog con HTML5" width="300" height="300" />
+                <img src="assets/semantic_3.png" alt="Comparación HTML semántico y no semántico" width="300"
+                    height="300" />
+                <figcaption>
+                    Estas imágenes ilustran cómo se estructura un sitio web usando etiquetas semánticas en HTML5,
+                    y comparan la búsqueda semántica vs no semántica.
+                </figcaption>
+            </figure>
+        </section>
+
+    </main>
+
+    <!-- Contenido adicional no directamente relacionado con el main -->
+    <aside>
+        <h3>Contenido relacionado</h3>
+        <ul>
+            <li><a href="#">Accesibilidad web</a></li>
+            <li><a href="#">Buenas prácticas en HTML</a></li>
+        </ul>
+    </aside>
+
+    <!-- Pie de página del sitio -->
+    <footer>
+        <p>&copy; 2025 Mi Blog de Desarrollo Web</p>
+    </footer>
 </body>
 
 </html>
