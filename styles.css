@@ -1,0 +1,65 @@
+/* Selector por nombre de etiqueta */
+p {
+    color: blue;
+  }
+  
+  /* Selector por ID */
+  #menu {
+    background-color: red;
+    color: white;
+    padding: 10px;
+  }
+  
+  /* Selector por clase */
+  .special {
+    font-weight: bold;
+  }
+  
+  /* Selector descendiente */
+  div p {
+    font-size: 16px;
+  }
+  
+  /* Selector hijo directo */
+  div > p {
+    font-size: 18px;
+  }
+  
+  /* Selector hermano siguiente */
+  div + p {
+    margin-top: 20px;
+  }
+  
+  /* Selector de hermanos generales */
+  div ~ p {
+    text-decoration: underline;
+  }
+  
+  /* Colores por nombre */
+  .color-nombre {
+    background-color: lightgreen;
+    color: darkgreen;
+    padding: 10px;
+  }
+  
+  /* Colores en RGB */
+  .color-rgb {
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    padding: 10px;
+  }
+  
+  /* Colores en HEXA */
+  .color-hexa {
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 10px;
+  }
+  
+  /* Colores en HSL */
+  .color-hsl {
+    background-color: hsl(120, 100%, 50%);
+    color: hsl(0, 0%, 100%);
+    padding: 10px;
+  }
+  
