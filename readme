@@ -1,0 +1,51 @@
+# 🧪 Propiedades CSS aplicadas en la práctica
+
+Este documento resume todas las propiedades CSS utilizadas en la práctica de diseño de una página de cursos, indicando cuáles fueron tomadas del material teórico provisto y cuáles se agregaron como valor adicional para enriquecer el ejemplo.
+
+---
+
+## ✅ Propiedades incluidas desde el material de clase
+
+Las siguientes propiedades y conceptos están explicados en el archivo teórico y fueron aplicadas directamente en el ejemplo:
+
+| Propiedad / Concepto        | Aplicación en el ejemplo                                                          |
+| --------------------------- | --------------------------------------------------------------------------------- |
+| `font-family`               | Tipografía base: Arial, sans-serif.                                               |
+| `font-size`                 | Tamaños definidos con `px` y antes con `em`.                                      |
+| `font-style: italic`        | Aplicado al subtítulo del encabezado.                                             |
+| `text-align`                | Centrados (`center`) y justificados (`justify`).                                  |
+| `text-transform: uppercase` | Títulos convertidos a mayúscula.                                                  |
+| `text-shadow`               | Sombra para el `<h1>`.                                                            |
+| `color`                     | Definido para varios textos.                                                      |
+| `background-color`          | Usado en fondo de cuerpo y tarjetas.                                              |
+| `line-height`               | Mejora la legibilidad del texto.                                                  |
+| `:hover` (pseudoclase)      | Efecto visual sobre el botón al pasar el mouse.                                   |
+| `transition`                | Animación suave para `hover`.                                                     |
+| `border-left`               | Línea decorativa a la izquierda de las secciones.                                 |
+| `box-shadow`                | Efecto visual de profundidad en las tarjetas.                                     |
+| `border-radius`             | Bordes redondeados en botones y tarjetas.                                         |
+| **Herencia**                | `font-family` y `color` se aplican desde `html`, pendiente para la próxima clase. |
+
+---
+
+## 🆕 Propiedades agregadas
+
+Estas propiedades **no estaban mencionadas en el material original**, pero fueron incorporadas para mejorar la estética y experiencia de usuario del ejemplo:
+
+| Propiedad / Concepto       | Motivo de inclusión                                    |
+| -------------------------- | ------------------------------------------------------ |
+| `border-left` decorativo   | Marca visual para destacar cada curso.                 |
+| `box-shadow`               | Estética moderna, usada frecuentemente en UI actuales. |
+| `border-radius`            | Mejora visual, sensación de modernidad y suavidad.     |
+| `transition`               | Efecto suave al interactuar con botones.               |
+| `:hover` en botón          | Mejora la interacción visual del usuario.              |
+| `background-color` general | Da armonía visual al fondo de la página.               |
+
+---
+
+## 📌 Observaciones
+
+- El uso de `px` proporciona control exacto sobre tamaños, ideal para practicar valores absolutos.
+- El código también fue presentado previamente en `em` para ver diferencias entre unidades relativas y absolutas.
+
+---

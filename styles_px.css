@@ -1,0 +1,81 @@
+/* Estilos base en azul y grises */
+html {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8; /* gris muy claro azulado */
+    color: #2c3e50; /* gris oscuro */
+  }
+  
+  body {
+    margin: 0;
+    padding: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  /* Encabezado */
+  header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  header h1 {
+    font-size: 30px;
+    color: #1e3a8a; /* azul oscuro */
+    text-transform: uppercase;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  header p {
+    font-size: 18px;
+    font-style: italic;
+    color: #4b5563; /* gris medio */
+  }
+  
+  /* Secciones de curso */
+  .curso {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    border-left: 6px solid #3b82f6; /* azul brillante */
+  }
+  
+  .curso h2 {
+    font-size: 24px;
+    color: #1e40af; /* azul fuerte */
+  }
+  
+  .curso p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: justify;
+    color: #374151; /* gris oscuro */
+  }
+  
+  /* Botón */
+  .btn {
+    display: inline-block;
+    font-size: 14px;
+    padding: 8px 16px;
+    background-color: #2563eb; /* azul */
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #1d4ed8; /* azul más oscuro */
+  }
+  
+  /* Pie de página */
+  footer {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 40px;
+    color: #6b7280; /* gris claro */
+    border-top: 1px solid #d1d5db;
+    padding-top: 20px;
+  }
+  
