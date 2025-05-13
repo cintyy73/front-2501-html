@@ -1,41 +1,96 @@
-body {
-    box-sizing: border-box;
-    margin:0;
-    font-size: 16px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+body{
+  background-image: url(../assets/tecnologia.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+/* 1. Cascada: se aplicará el último color (green) */
+.ejemplo-cascada {
+  color: green;
+}
+.ejemplo-cascada {
+  color: red;
 }
 
-header h1 {
-    color: rgb(49, 49, 144);
-    font-size: 30px;
-    text-shadow: 2px 4px  1px rgba(143, 187, 217, 0.987);
+/* 2. Especificidad */
+div {
+  color: blue;
+}
+.ejemplo-especificidad {
+  color: orange; /* gana por ser clase */
 }
 
-header p {
-    color: #2f2f31;
-    font-size: 18px;
-    font-weight: 300;
-    text-shadow: 8px 1px 3px rgba(220,74,74,0.61);
+/* 3. Herencia */
+.padre {
+  color: purple; /* heredado por p */
 }
 
-section p {
-    font-style: italic;
-    text-decoration: overline dashed red;
+/* 4. Modelo de Caja */
+.box-model {
+  width: 200px;
+  height: 100px;
+  padding: 10px;
+  border: 3px solid black;
+  margin: 20px;
+  background-color: #f3f3f3;
 }
 
-a {
-    text-decoration: none;
+/* 5. Overflow */
+.overflow-demo {
+  width: 150px;
+  height: 350px;
+  overflow: scroll;
+  background-color: #e0e0e0;
 }
 
-footer {
-text-align: center;
-font-size: 14px;
-background-color:rgba(99, 94, 94, 0.47);
-color: #2f2f31;
-padding: 20px;
-/* border: 2px solid black; */
-margin-top: 20px;
-height: 30px;
+/* 6. Bordes */
+.borde {
+  border-width: 2px 4px 6px 8px;
+  border-style: dotted solid dashed double;
+  border-color: red green blue orange;
+  padding: 10px;
 }
 
+/* 7. Sombra */
+.sombra {
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  background-color: white;
+}
 
+/* 8. Bordes redondeados */
+.bordes-redondeados {
+  border: 2px solid #999;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+/* 9. Imagen de fondo */
+.fondo-imagen {
+  background-image: url('https://via.placeholder.com/150');
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100px;
+}
+
+/* 10. Gradiente */
+.fondo-gradiente {
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+  padding: 20px;
+  color: white;
+}
+
+/* 11. Centrado horizontal */
+.centrado {
+  width: 300px;
+  margin: 0 auto;
+  background-color: #e8eaf6;
+  text-align: center;
+}
+
+/* 12. Display */
+.display {
+  display: inline;
+  background-color: yellow;
+  padding: 5px;
+}

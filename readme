@@ -1,51 +1,81 @@
-# 🧪 Propiedades CSS aplicadas en la práctica
+# 📦 Modelo de Caja en CSS 
 
-Este documento resume todas las propiedades CSS utilizadas en la práctica de diseño de una página de cursos, indicando cuáles fueron tomadas del material teórico provisto y cuáles se agregaron como valor adicional para enriquecer el ejemplo.
+Este repositorio contiene un ejemplo práctico que utiliza las propiedades del **Modelo de Caja en CSS**, basado en una **noticia de innovación tecnológica** sobre **React Server Components**.
 
----
-
-## ✅ Propiedades incluidas desde el material de clase
-
-Las siguientes propiedades y conceptos están explicados en el archivo teórico y fueron aplicadas directamente en el ejemplo:
-
-| Propiedad / Concepto        | Aplicación en el ejemplo                                                          |
-| --------------------------- | --------------------------------------------------------------------------------- |
-| `font-family`               | Tipografía base: Arial, sans-serif.                                               |
-| `font-size`                 | Tamaños definidos con `px` y antes con `em`.                                      |
-| `font-style: italic`        | Aplicado al subtítulo del encabezado.                                             |
-| `text-align`                | Centrados (`center`) y justificados (`justify`).                                  |
-| `text-transform: uppercase` | Títulos convertidos a mayúscula.                                                  |
-| `text-shadow`               | Sombra para el `<h1>`.                                                            |
-| `color`                     | Definido para varios textos.                                                      |
-| `background-color`          | Usado en fondo de cuerpo y tarjetas.                                              |
-| `line-height`               | Mejora la legibilidad del texto.                                                  |
-| `:hover` (pseudoclase)      | Efecto visual sobre el botón al pasar el mouse.                                   |
-| `transition`                | Animación suave para `hover`.                                                     |
-| `border-left`               | Línea decorativa a la izquierda de las secciones.                                 |
-| `box-shadow`                | Efecto visual de profundidad en las tarjetas.                                     |
-| `border-radius`             | Bordes redondeados en botones y tarjetas.                                         |
-| **Herencia**                | `font-family` y `color` se aplican desde `html`, pendiente para la próxima clase. |
+El objetivo es aplicar visualmente conceptos como `box-sizing`, `padding`, `margin`, `borders`, `display`, `background`, entre otros.
 
 ---
 
-## 🆕 Propiedades agregadas
+## 📰 Contexto de la noticia
 
-Estas propiedades **no estaban mencionadas en el material original**, pero fueron incorporadas para mejorar la estética y experiencia de usuario del ejemplo:
-
-| Propiedad / Concepto       | Motivo de inclusión                                    |
-| -------------------------- | ------------------------------------------------------ |
-| `border-left` decorativo   | Marca visual para destacar cada curso.                 |
-| `box-shadow`               | Estética moderna, usada frecuentemente en UI actuales. |
-| `border-radius`            | Mejora visual, sensación de modernidad y suavidad.     |
-| `transition`               | Efecto suave al interactuar con botones.               |
-| `:hover` en botón          | Mejora la interacción visual del usuario.              |
-| `background-color` general | Da armonía visual al fondo de la página.               |
+**React Server Components** permite renderizar en el servidor parte de la interfaz, mejorando el rendimiento al reducir el código JavaScript enviado al navegador.
 
 ---
 
-## 📌 Observaciones
+## 💡 Conceptos clave (basados en la Clase 6 - Modelo de Caja)
 
-- El uso de `px` proporciona control exacto sobre tamaños, ideal para practicar valores absolutos.
-- El código también fue presentado previamente en `em` para ver diferencias entre unidades relativas y absolutas.
+### 🔹 Modelo de caja
+
+- **`width` / `height`**: define el ancho y alto del contenido.
+- **`min-width` / `max-width` / `min-height` / `max-height`**: límites mínimos o máximos del tamaño.
+- **`padding`**: espacio interior entre el borde y el contenido.
+  - Se puede definir con: `padding-top`, `padding-right`, `padding-bottom`, `padding-left`.
+- **`margin`**: espacio exterior entre el elemento y otros elementos.
+  - Se puede definir con: `margin-top`, `margin-right`, `margin-bottom`, `margin-left`.
+- **`border`**: define el borde del elemento.
+  - Componentes: `border-width`, `border-style`, `border-color`.
+- **`box-sizing`**: define cómo se calcula el tamaño total del elemento.
+  - Valor recomendado: `border-box`.
+
+📌 *El tamaño total de la caja depende de la suma del contenido, el `padding`, los `borders` y el `margin`.*
 
 ---
+
+### 🔹 Bordes redondeados y sombra
+
+- **`border-radius`**: redondea las esquinas de la caja.
+  - Se puede aplicar a cada esquina con: `border-top-left-radius`, etc.
+- **`box-shadow`**: añade una sombra externa o interna (con `inset`) a la caja.
+  - Sintaxis: `offset-x offset-y blur-radius spread-radius color`.
+
+---
+
+### 🔹 Fondo
+
+- **`background-color`**: color de fondo.
+- **`background-image`**: imagen de fondo con `url()`.
+- **`background-repeat`**: control de repetición (`repeat`, `no-repeat`, `repeat-x`, `repeat-y`).
+- **`background-position`**: posición de la imagen (`center`, `top`, `right`, etc.).
+- **`background-attachment`**: comportamiento del fondo al hacer scroll (`fixed`, `scroll`).
+- **`background`**: propiedad abreviada para agrupar todas las anteriores.
+- **`linear-gradient`**: fondo degradado de colores.
+
+---
+
+### 🔹 Visualización
+
+- **`display`**:
+  - `block`: ocupa todo el ancho, fuerza salto de línea.
+  - `inline`: no permite `width`/`height`, no fuerza salto de línea.
+  - `inline-block`: mezcla comportamiento de ambos.
+  - `none`: oculta el elemento completamente.
+- **`overflow`**:
+  - `hidden`: oculta el contenido que se desborda.
+  - `scroll`: agrega scroll si el contenido se desborda.
+
+## 📌 Recomendaciones
+
+- Siempre usar `box-sizing: border-box` para un control más intuitivo del tamaño.
+- Comenzar con un `reset` CSS básico: `margin: 0; padding: 0;`.
+- Usar `DevTools` del navegador para inspeccionar el modelo de caja de cada elemento.
+- Utilizar propiedades abreviadas (`padding`, `margin`, `background`) para escribir CSS más limpio.
+
+---
+
+## 🧠 Recursos adicionales
+
+- [Documentación oficial de MDN sobre el modelo de caja](https://developer.mozilla.org/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+
+
+---
+
