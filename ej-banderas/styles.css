@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.banderav {
+    display: flex;
+    margin: 20px;
+    width: 300px;
+    height: 200px;
+
+
+}
+
+.franjamv {
+    width: 100px;
+    height: 200px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+
+}
+
+.franjav {
+    height: 200px;
+    width: 100px;
+    border: 1px solid black;
+    flex-direction: column-reverse;
+}
+
+.rojav {
+    background-color: red;
+}
+
+.azulv {
+    background-color: blue;
+}
+
+.verdev {
+    background-color: green;
+}
+
+.blancamv {
+    background-color: white;
+}
+
+.bandera {
+    margin: 20px;
+    width: 300px;
+    height: 200px;
+
+}
+
+
+
+
+
+
+.franja {
+    border: 1px solid black;
+    height: 33.333%;
+}
+
+.franjam {
+    height: 33.3333%;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+}
+
+div .celeste {
+    background-color: lightblue;
+}
+
+div .blanca {
+    background-color: white;
+}
+
+.roja {
+    background-color: red;
+}
+
+.azul {
+    background-color: blue;
+}
+
+.verde {
+    background-color: green;
+}
+
+.amarilla {
+    background-color: yellow;
+}
+
+.negra {
+    background-color: black;
+}
+
+.blancav {
+    background-color: white;
+}

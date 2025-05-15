@@ -1,0 +1,71 @@
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+      background: #f0f0f0;
+    }
+
+    .container {
+      display: flex;
+      /* Cambiá las propiedades acá para mostrar ejemplos */
+      border: 2px dashed #333;
+      padding: 10px;
+      height: 300px;
+      gap: 10px;
+      /* Experimentá con esto:
+      flex-direction: row | column;
+      justify-content: flex-start | center | space-between | space-around;
+      align-items: flex-start | center | stretch;
+      flex-wrap: wrap;
+      */
+    }
+
+    .container-svg {
+      display: flex;
+      /* Cambiá las propiedades acá para mostrar ejemplos */
+      border: 2px solid #333;
+      padding: 10px;
+      height: 300px;
+      gap: 10px;
+      /* Experimentá con esto:
+      flex-direction: row | column;
+      justify-content: flex-start | center | space-between | space-around;
+      align-items: flex-start | center | stretch;
+      flex-wrap: wrap;
+      */
+    }
+
+    .item {
+      flex: 1 1 100px;
+      /* grow, shrink, basis */
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100px;
+    }
+
+    .item1 {
+      background-color: #ff595e;
+    }
+
+    .item2 {
+      background-color: #1982c4;
+    }
+
+    .item3 {
+      background-color: #6a4c93;
+    }
+
+    .item4 {
+      background-color: #8ac926;
+    }
+
+    .item5 {
+      background-color: #ffca3a;
+    }
