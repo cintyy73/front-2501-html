@@ -1,0 +1,23 @@
+.container {
+  background-color: antiquewhite;
+  padding: 20px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .container {
+    background-color: yellow;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    background-color: blue;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    background-color: red;
+  }
+}
