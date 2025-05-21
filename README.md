@@ -75,29 +75,29 @@ Además, aplicar estilos básicos en CSS para que la página tenga un diseño li
   Define una fuente legible (ejemplo: Arial).
   ```
 
-Estiliza el header con fondo oscuro, texto blanco y menú horizontal.
+- Estiliza el header con fondo oscuro, texto blanco y menú horizontal.
 
-Dale estilo al título principal para que sea grande y llamativo.
+- Dale estilo al título principal para que sea grande y llamativo.
 
-Estiliza las listas para que no tengan viñetas.
+- Estiliza las listas para que no tengan viñetas.
 
-Usa display: grid para la galería de imágenes con varias columnas.
+- Usa display: grid para la galería de imágenes con varias columnas.
 
-Estiliza el footer con fondo oscuro y texto blanco.
+- Estiliza el footer con fondo oscuro y texto blanco.
 
-Añade estilos responsivos con media queries para móviles (por ejemplo, menú vertical en pantallas pequeñas).
+- Añade estilos responsivos con media queries para móviles (por ejemplo, menú vertical en pantallas pequeñas).
 
-Extras (Opcional)
-Efectos hover en enlaces e imágenes.
+### Extras (Opcional)
+- Efectos hover en enlaces e imágenes.
 
-Colores suaves y agradables.
+- Colores suaves y agradables.
 
-Scroll suave para enlaces internos:
+- Scroll suave para enlaces internos:
+  ```css
+  html {
+   scroll-behavior: smooth;
+  }
+ 
+  ```     
 
-css
-Copiar
-Editar
-html {
-scroll-behavior: smooth;
-}
 ¡A programar y divertirse creando su primera landing page!
