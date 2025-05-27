@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de Inscripción</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+
+    <h2>FORMULARIO DE INSCRIPCIÓN:<h2>
+            <h3> CARRERA DE DESARROLLO BACKEND 2025</h3>
+            <form id="formulario" action="/submit" method="post" enctype="multipart/form-data">
+                <fieldset>
+                    <legend>Datos Personales</legend>
+
+                    <label for="fullname">Nombre completo:</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Ej: Juan Pérez" required
+                        maxlength="50" />
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required />
+
+                    <label for="birthdate">Fecha de nacimiento:</label>
+                    <input type="date" id="birthdate" name="birthdate" min="1900-01-01" required />
+
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" required minlength="6" />
+
+                    <label for="website">Sitio Web:</label>
+                    <input type="url" id="website" name="website" placeholder="https://miweb.com" />
+                    <p>Sube tu foto de perfil:</p>
+                    <input type="file" name="profile_photo" required />
+                </fieldset>
+
+                <fieldset>
+                    <legend>Preferencias</legend>
+
+                    <p>Género:</p>
+                    <label class="inline"><input type="radio" name="gender" value="male" checked /> Masculino</label>
+                    <label class="inline"><input type="radio" name="gender" value="female" /> Femenino</label>
+                    <label class="inline"><input type="radio" name="gender" value="other" /> Otro</label>
+
+                    <p>Intereses:</p>
+                    <label class="inline"><input type="checkbox" name="interests" value="tech" checked />
+                        Tecnología</label>
+                    <label class="inline"><input type="checkbox" name="interests" value="sports" /> Deportes</label>
+                    <label class="inline"><input type="checkbox" name="interests" value="music" /> Música</label>
+
+
+                </fieldset>
+
+
+
+                <fieldset>
+                    <legend>Otros</legend>
+
+                    <label for="country">País:</label>
+                    <select name="country" id="country" required>
+                        <option value="" selected disabled>Selecciona tu país</option>
+                        <option value="ar">Argentina</option>
+                        <option value="cl">Chile</option>
+                        <option value="uy">Uruguay</option>
+                    </select>
+
+                    <input type="hidden" name="source" value="formulario_clase10" />
+                    <input type="hidden" name="course" value="Frontend" />
+
+                    <label for="search">¿Cómo nos encontraste?</label>
+                    <input type="search" name="search" id="search" placeholder="Buscar..." />
+                </fieldset>
+                <fieldset>
+                    <legend>Comisión Especial</legend>
+                    <p>📢 Puedes rendir un exámen compensatorio y acortar los tiempos de cursada.</p>
+                    <label>Haz click si eres de la comisión 25-01</label>
+                    <button type="button" id="comi25" class="comi-boton-bg"></button>
+                </fieldset>
+                <fieldset>
+                    <legend>Comentarios</legend>
+                    <label for="comments">¿Por qué quieres inscribirte?</label><br />
+                    <textarea name="comments" id="comments" rows="40" cols="50" placeholder="Escribe aquí..."></textarea>
+                </fieldset>
+                <div class="button-group">
+                    <button type="submit">Enviar </button>
+                    <button type="reset">Reiniciar</button>
+                </div>
+
+            </form>
+
+            <script src="index.js"></script>
+</body>
+
+</html>

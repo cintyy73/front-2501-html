@@ -4,12 +4,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+
+    <title>Clase 10 Formularios</title>
 </head>
 
 <body>
+    <h2>FORMULARIO DE INSCRIPCIÓN:<h2>
+            <h3> CARRERA DE DESARROLLO BACKEND 2025</h3>
+            <form id="formulario" action="/submit" method="post" enctype="multipart/form-data">
+                <input type="hidden" name="course" value="backend" />
 
-    
+                <fieldset>
+                    <legend>Datos personales</legend>
+                    <label for="fullname">Nombre y Apellido</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Ej: Juan Perez" required />
+                    <label for="password">Ingrese una contraseña</label>
+                    <input type="password" id="password" name="password" placeholder="***********" maxlength="8"
+                        size="10" />
+                    <label for="email">Ingrese su dirección de correo eletrónico</label>
+                    <input type="email" name="email" id="email" placeholder="ejemplo@correo.com">
+                    <label for="date">Ingrese su fecha de nacimineto</label>
+                    <input type="date" name="date" id="date">
+                    <label for="profile_photo">Sube tu foto de perfil</label>
+                    <input type="file" id="profile_photo" name="profile_photo" />
+
+                    <label for="website">Ingresa un enlace a tu sitio web</label>
+                    <input type="url" id="website" name="website" placeholder="https://miweb.com">
+                </fieldset>
+                <fieldset>
+                    <legend>Intereses</legend>
+                    <p>Género</p>
+                    <Label>
+
+                        <input class="inline" type="radio" id="gender" name="gender" value="male" />
+                        Masculino
+                    </Label>
+                    <Label>
+
+                        <input class="inline" type="radio" name="gender" value="female" />
+                        Femenino
+                    </Label>
+                    <label class="inline"><input type="radio" name="gender" value="other" checked /> Otro</label>
+
+                    <p>Intereses</p>
+                    <label class="inline">
+                        <input type="checkbox" value="html" />
+                        html
+                    </label>
+                    <label class="inline">
+                        <input type="checkbox" value="css" />
+                        css
+                    </label>
+                    <label class="inline">
+                        <input type="checkbox" value="js" checked />
+                        js
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend> otros</legend>
+                    <label for="country">País</label>
+                    <select id="country" name="country" required>
+                        <option selected disabled value="">Selecciona tu paìs de residencia</option>
+                        <option value="ar">Argentina</option>
+                        <option value="ch">Chile</option>
+                        <option value="ur">Uruguay</option>
+                    </select>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Comentarios</legend>
+                    <label for="comments">¿Por qué quieres inscribirte?</label><br />
+                    <textarea name="comments" id="comments" rows="10" cols="10"
+                        placeholder="Escribe aquí..."></textarea>
+                </fieldset>
+                <fieldset>
+                    <legend>Comisión Especial</legend>
+                    <p>📢 Puedes rendir un exámen compensatorio y acortar los tiempos de cursada.</p>
+                    <label>Haz click si eres de la comisión 25-01</label>
+                    <button type="button" id="comi25" class="comi-boton-bg"></button>
+                </fieldset>
+                <label for="search">¿Cómo nos encontraste?</label>
+                <input type="search" name="search" id="search" placeholder="Buscar..." />
+
+                <div class="button-group">
+
+                    <button type="submit">Enviar</button>
+                    <button type="reset">Reset</button>
+                </div>
+
+
+            </form>
+            <script src="index.js"></script>
 </body>
 
 </html>

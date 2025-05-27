@@ -1,0 +1,102 @@
+body {
+  margin: 2rem;
+  background-image: radial-gradient(circle, #ff6b6b 2px, transparent 2px),
+    radial-gradient(circle, #4ecdc4 2px, transparent 2px),
+    radial-gradient(circle, #ffe66d 2px, transparent 2px),
+    radial-gradient(circle, #1a535c 2px, transparent 2px);
+  background-position: 10% 10%, 50% 30%, 80% 80%, 30% 70%;
+  background-size: 150px 150px;
+  background-repeat: repeat;
+  background-color: #fdf4e3;
+}
+
+h2, h3{
+    text-align: center;
+}
+
+form{
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: auto;
+}
+
+fieldset{
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    padding: 1.5rem;
+    border-radius: 6px;
+}
+
+legend {
+    font-weight: bold;
+    padding: 10px;
+}
+
+label{
+    margin-top:10px;
+    display: block;
+
+}
+
+input{
+width: 70%;
+padding: 10px;
+margin-top: 5px ;
+border-radius: 8px;
+border: 1px solid #ccc;
+}
+
+/* 🔘 Radios y checkboxes alineados */
+label.inline {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-top: 0.5em;
+}
+
+label.inline input[type="radio"],
+label.inline input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.button-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 10px;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+}
+
+button[type="reset"] {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.comi-boton-bg{
+width: 150px;
+height: 150px;
+background-image: url('image.png');
+background-size: cover;
+background-repeat: no-repeat;
+background-position:'center';
+border: none;
+cursor: pointer;
+
+}
