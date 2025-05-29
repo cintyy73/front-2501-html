@@ -1,104 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css" />
-
-    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
-
-    <title>Clase 10 Formularios</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Pseudo-clases CSS</title>
 </head>
 
 <body>
-    <h2>FORMULARIO DE INSCRIPCIÓN:<h2>
-            <h3> CARRERA DE DESARROLLO BACKEND 2025</h3>
-            <form id="formulario" action="/submit" method="post" enctype="multipart/form-data">
-                <input type="hidden" name="course" value="backend" />
+  <a href="#info">Ver más información</a>
+  <h1>Pseudo-clases en acción</h1>
 
-                <fieldset>
-                    <legend>Datos personales</legend>
-                    <label for="fullname">Nombre y Apellido</label>
-                    <input type="text" id="fullname" name="fullname" placeholder="Ej: Juan Perez" required />
-                    <label for="password">Ingrese una contraseña</label>
-                    <input type="password" id="password" name="password" placeholder="***********" maxlength="8"
-                        size="10" />
-                    <label for="email">Ingrese su dirección de correo eletrónico</label>
-                    <input type="email" name="email" id="email" placeholder="ejemplo@correo.com">
-                    <label for="date">Ingrese su fecha de nacimineto</label>
-                    <input type="date" name="date" id="date">
-                    <label for="profile_photo">Sube tu foto de perfil</label>
-                    <input type="file" id="profile_photo" name="profile_photo" />
+  <h2>1. :not()</h2>
+  <button class="primary">Botón primario</button>
+  <button>Botón secundario</button>
 
-                    <label for="website">Ingresa un enlace a tu sitio web</label>
-                    <input type="url" id="website" name="website" placeholder="https://miweb.com">
-                </fieldset>
-                <fieldset>
-                    <legend>Intereses</legend>
-                    <p>Género</p>
-                    <Label>
+  <h2>2. :nth-child()</h2>
+  <ul>
+    <li>Primer elemento</li>
+    <li>Segundo elemento (resaltado)</li>
+    <li>Tercer elemento</li>
+  </ul>
 
-                        <input class="inline" type="radio" id="gender" name="gender" value="male" />
-                        Masculino
-                    </Label>
-                    <Label>
+  <ol>
+    <li>Primer elemento</li>
+    <li>Segundo elemento</li>
+    <li>Tercer elemento</li>
+  </ol>
+  <h2>3. :nth-of-type()</h2>
+  <section>
+    <p>Primer párrafo</p>
+    <p>Segundo párrafo (estilo aplicado)</p>
+    <p>Tercer párrafo</p>
+  </section>
 
-                        <input class="inline" type="radio" name="gender" value="female" />
-                        Femenino
-                    </Label>
-                    <label class="inline"><input type="radio" name="gender" value="other" checked /> Otro</label>
+  <h2>4. :hover</h2>
+  <a href="#">Pasá el mouse por este enlace</a>
 
-                    <p>Intereses</p>
-                    <label class="inline">
-                        <input type="checkbox" value="html" />
-                        html
-                    </label>
-                    <label class="inline">
-                        <input type="checkbox" value="css" />
-                        css
-                    </label>
-                    <label class="inline">
-                        <input type="checkbox" value="js" checked />
-                        js
-                    </label>
-                </fieldset>
-                <fieldset>
-                    <legend> otros</legend>
-                    <label for="country">País</label>
-                    <select id="country" name="country" required>
-                        <option selected disabled value="">Selecciona tu paìs de residencia</option>
-                        <option value="ar">Argentina</option>
-                        <option value="ch">Chile</option>
-                        <option value="ur">Uruguay</option>
-                    </select>
+  <h2>5. :active</h2>
+  <button>Haz clic aquí</button>
 
-                </fieldset>
+  <h2>6. :focus</h2>
+  <input type="text" placeholder="Escribe algo..." />
 
-                <fieldset>
-                    <legend>Comentarios</legend>
-                    <label for="comments">¿Por qué quieres inscribirte?</label><br />
-                    <textarea name="comments" id="comments" rows="10" cols="10"
-                        placeholder="Escribe aquí..."></textarea>
-                </fieldset>
-                <fieldset>
-                    <legend>Comisión Especial</legend>
-                    <p>📢 Puedes rendir un exámen compensatorio y acortar los tiempos de cursada.</p>
-                    <label>Haz click si eres de la comisión 25-01</label>
-                    <button type="button" id="comi25" class="comi-boton-bg"></button>
-                </fieldset>
-                <label for="search">¿Cómo nos encontraste?</label>
-                <input type="search" name="search" id="search" placeholder="Buscar..." />
+  <h2>7. :target</h2>
 
-                <div class="button-group">
+  <div id="info">
+    <p>Este bloque se resalta si hacés clic en el enlace "Ver más información" Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Nemo molestias magni laudantium? Accusamus expedita, blanditiis eligendi fuga error iusto
+      quisquam repellat porro corporis est at sint mollitia laboriosam libero architecto nihil. Sit ducimus ea nobis
+      repellendus esse omnis, blanditiis pariatur soluta ut, voluptatem illo quia quas architecto porro? Assumenda fuga
+      cum, saepe eveniet qui dolorem voluptates magnam perspiciatis minus. Quam, laboriosam. Fuga consequatur explicabo
+      cupiditate quae, nulla cum iusto quasi deleniti ullam? Quam ipsa tempora quidem, dignissimos, illum corrupti
+      veritatis tenetur iste amet, ea sapiente in enim blanditiis. Atque reiciendis eaque voluptatem corporis a officiis
+      illum enim! Ullam doloribus nam illo quis commodi, cupiditate magnam ut, fugit cum accusamus quos soluta magni
+      veritatis maiores ducimus quas esse? Optio quae explicabo obcaecati repellendus sunt itaque consequuntur, vitae
+      quis voluptatum quos eos distinctio vero sed quibusdam fugit possimus, cupiditate accusamus, totam assumenda ipsam
+      facere! Porro iure aut suscipit ducimus voluptatem ipsam quis fugit, ut quidem officia veniam autem doloribus
+      excepturi a numquam dolore nisi temporibus. Soluta distinctio ut veniam debitis asperiores, accusantium, vero
+      earum nemo, ad consectetur voluptatem similique a! Id ut recusandae rerum esse eveniet dolor ad. Ad ullam mollitia
+      ut adipisci? Ex fuga unde exercitationem doloremque temporibus praesentium. Necessitatibus, nobis. Nemo quae enim
+      vel blanditiis voluptatem soluta? Unde voluptatem, repellat obcaecati ipsam quasi tempore fuga magni provident,
+      dolorem officia libero rerum dignissimos, quidem odit ratione deserunt vero itaque at praesentium! Laboriosam nemo
+      tempore officiis quis? Maiores, ipsum voluptatum numquam quisquam corporis dolores officiis ipsam nam accusantium,
+      incidunt quibusdam, dolorem aspernatur! Amet, corporis ullam doloribus autem voluptates sunt expedita odit aperiam
+      debitis excepturi quia voluptas porro! Cumque excepturi molestiae veritatis ab incidunt reprehenderit distinctio
+      magni nesciunt maxime deleniti harum numquam maiores, officia dignissimos mollitia! Repellendus delectus eius
+      perspiciatis quae consequatur tenetur officiis accusantium, enim quas sunt voluptate minima vel. At nemo officiis
+      explicabo repellendus sed vel nobis deleniti. Esse temporibus rem quibusdam dolores vero voluptate ut ratione
+      tenetur ipsum consequuntur, voluptatibus ullam beatae porro iure, sit omnis obcaecati dolorem asperiores nulla
+      molestiae unde officiis neque quisquam expedita! Saepe praesentium fugiat molestiae enim, ipsum eveniet dicta
+      necessitatibus adipisci, iure, voluptates dolorum ut ratione voluptas tempora quod dolor tenetur? Odio aliquam
+      iste esse possimus reiciendis earum repellendus quas? Quisquam commodi neque consequuntur. Provident corporis
+      totam deserunt laborum animi in atque ipsa fuga quibusdam non quod consectetur, nesciunt dicta, fugit quo nihil
+      impedit illum natus soluta. Commodi culpa reprehenderit animi maxime, suscipit eius tempore inventore nihil
+      pariatur laboriosam modi atque, corrupti dolore facilis magnam cum. Necessitatibus pariatur ea delectus dolor
+      soluta totam consequatur maxime neque voluptates? In dolorum, blanditiis nesciunt iste adipisci velit sed debitis
+      reiciendis possimus neque quod, doloremque sequi eaque quo magni ullam alias, veniam dolorem voluptatem fugiat
+      sapiente corrupti? Facilis hic, repellendus quos debitis delectus optio culpa quam aliquam dolor modi voluptatum
+      deleniti nobis consequatur corrupti dolorum nisi pariatur reprehenderit ad voluptate veritatis magnam quisquam
+      rem, earum tempore. Veritatis voluptate, error sit consequatur recusandae nesciunt temporibus amet nobis omnis nam
+      laborum nulla fuga voluptatum rem enim sunt dolorum harum eaque? Natus.</p>
+  </div>
 
-                    <button type="submit">Enviar</button>
-                    <button type="reset">Reset</button>
-                </div>
+  <h2>8. :checked</h2>
+  <input type="checkbox" id="check1" />
+  <label for="check1">Opción marcada</label>
 
+  <div>
+    <a href="https://docs.google.com/presentation/d/1AWPjHQde=id.p7">link
+      1
+    </a>
+    <div>
+      <p>soy un párrafo hijo de div div</p>
+    </div>
+    <h2>9. :valid / :invalid</h2>
+    <input type="text" placeholder="Ingresa tu email" minlength="6" required />
+    <input type="email" placeholder="Ingresa tu email" required />
+    <h2>10. :placeholder-shown</h2>
+    <a href="hpte://docs.google.com/presentation/d/1AWPjHQfYp7#slide=id.p7">link2</a>
+    <h2>10. :placeholder-shown</h2>
+    <label for="focus">click para focus</label>
+    <input id="focus" type="text" placeholder="Este texto desaparece al escribir" />
+  </div>
 
-            </form>
-            <script src="index.js"></script>
 </body>
 
 </html>

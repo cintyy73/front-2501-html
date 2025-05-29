@@ -1,102 +1,121 @@
-body {
-  margin: 2rem;
-  background-image: radial-gradient(circle, #ff6b6b 2px, transparent 2px),
-    radial-gradient(circle, #4ecdc4 2px, transparent 2px),
-    radial-gradient(circle, #ffe66d 2px, transparent 2px),
-    radial-gradient(circle, #1a535c 2px, transparent 2px);
-  background-position: 10% 10%, 50% 30%, 80% 80%, 30% 70%;
-  background-size: 150px 150px;
-  background-repeat: repeat;
-  background-color: #fdf4e3;
-}
 
-h2, h3{
-    text-align: center;
-}
+    /* ::before y ::after 
+       Añade contenido antes y después del <h1> sin modificar el HTML */
+    h1::before {
+      content: "⭐ ";
+    }
 
-form{
-    background-color: white;
-    padding: 1.5rem;
-    border-radius: 8px;
-    max-width: 600px;
-    margin: auto;
-}
+    h1::after {
+      content: " ⭐";
+    }
 
-fieldset{
-    margin-bottom: 1rem;
-    border: 1px solid #ccc;
-    padding: 1.5rem;
-    border-radius: 6px;
-}
+    /* :not(selector) 
+       Selecciona todos los botones que NO tienen la clase .primary */
+    button:not(.primary) {
+      background-color: lightgray;
+      color: black;
+    }
 
-legend {
-    font-weight: bold;
-    padding: 10px;
-}
+    /* :nth-child(n) 
+       Selecciona el segundo <li> hijo dentro del <ul> */
+   ol li:nth-child(2) {
+      color: blue; 
+       font-weight: bold; 
+    }
 
-label{
-    margin-top:10px;
-    display: block;
+    li:nth-child(3) {
+      font-size: 40px;
+       font-weight: bold; 
+    }
 
-}
+    /* :nth-of-type(n) 
+       Selecciona el segundo <p> dentro del <section> (sin importar hijos de otro tipo) */
+    section p:nth-of-type(2) {
+      color: purple;
+      font-style: italic;
+    }
 
-input{
-width: 70%;
-padding: 10px;
-margin-top: 5px ;
-border-radius: 8px;
-border: 1px solid #ccc;
-}
+    /* :hover 
+       Aplica estilos cuando el usuario pasa el mouse por encima del enlace */
+   
 
-/* 🔘 Radios y checkboxes alineados */
-label.inline {
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
-  margin-top: 0.5em;
-}
+    /* :active 
+       Aplica estilos cuando se hace clic en el botón (estado activo) */
+    button:active {
+      transform: scale(0.55);
+      background-color: rgb(26, 14, 119);
+    }
 
-label.inline input[type="radio"],
-label.inline input[type="checkbox"] {
-  width: auto;
-  margin: 0;
-  vertical-align: middle;
-}
+    /* :focus 
+       Estiliza un campo de entrada cuando recibe el foco (el cursor está dentro) */
+    input:focus {
+      outline: 2px solid rgb(41, 32, 217);
+    }
 
-.button-group{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    margin-top: 10px;
-}
+    /* :target 
+       Aplica estilos al elemento que es objetivo de un enlace con #id */
+    #info:target {
+      background-color: rgb(189, 100, 195);
+      padding: 1em;
+      border-radius: 6px;
+    }
 
-button[type="submit"] {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  width: 150px;
-  height: 50px;
-  cursor: pointer;
-}
+    /* :checked 
+       Aplica estilo al <label> si su checkbox está marcado */
+    input[type="checkbox"]:checked+label {
+      background-color: green;
+      color: white;
+      padding: 0.2em 0.5em;
+      border-radius: 4px;
+    }
 
-button[type="reset"] {
-  background-color: #6c757d;
-  color: white;
-  border: none;
-  width: 150px;
-  height: 50px;
-  cursor: pointer;
-}
+    /* :valid 
+       Aplica estilo a campos válidos (por ejemplo, un email bien escrito) */
+    input:valid {
+      border: 2px solid green;
+    }
 
-.comi-boton-bg{
-width: 150px;
-height: 150px;
-background-image: url('image.png');
-background-size: cover;
-background-repeat: no-repeat;
-background-position:'center';
-border: none;
-cursor: pointer;
+    /* :invalid 
+       Aplica estilo a campos inválidos (por ejemplo, un email mal escrito) */
+    input:invalid {
+      border: 2px solid red;
+    }
 
-}
+    /* :placeholder-shown 
+       Aplica estilo mientras el campo muestra el texto del placeholder */
+    input:placeholder-shown {
+      color: gray;
+    }
+
+    button[class~=primary] {
+      width: 500px;
+    }
+    a[href^="https://"] {
+      font-size: 100px;
+    }
+   a:hover {
+      color: orange;
+      text-decoration: underline;
+      font-size: 50px;
+    }
+
+    h1+h2 {
+      background-color: rgb(68, 211, 45);
+    }
+
+    a ~ h2{
+      background-color: yellow;
+    }
+    div div p{
+      background-color: aqua;
+    }
+
+    ol > li {
+      background-color: crimson;
+    }
+
+     /* p:nth-of-type(1){
+      background-color: darkmagenta;
+    } */
+
+  
