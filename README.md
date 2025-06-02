@@ -1,107 +1,170 @@
-# 🧪 Pseudo-clases CSS — Guía paso a paso
+# 🌟 Selectores Avanzados y Pseudo-clases en CSS
 
-## 🔹 1. `:not()` — Excluir un selector
-**Ubicación:** Justo después del título "1. :not()".
+## 🎯 Objetivo de la Actividad
 
-**Acción:** Mostrar ambos botones.
+Crear un mini sitio web con estilos avanzados aplicando los conceptos de:
 
-✅ El botón sin clase `.primary` se ve con fondo gris y texto negro.
-
-📌 *Explicación:* `button:not(.primary)` aplica estilos a todos los botones que **no tienen** la clase `primary`.
+- Selectores avanzados (atributos, jerarquías, universales).
+- Pseudo-clases dinámicas y estructurales.
 
 ---
 
-## 🔹 2. `:nth-child(n)` — Hijo n-ésimo
-**Ubicación:** En la lista `<ul>`.
+## 📘 Teoría y Ejemplos
 
-✅ El segundo `<li>` se ve azul y en negrita.
+### 🔹 1. Selectores Avanzados
 
-📌 *Explicación:* `li:nth-child(2)` selecciona el segundo hijo en el orden en que aparecen en el padre.
+#### ✅ Selector de atributo
 
----
+```css
+a[href^="#"] {
+  color: teal;
+  font-weight: bold;
+}
+🧠 Qué hace: selecciona todos los <a> que tengan un atributo href que comience con #.
 
-## 🔹 3. `:nth-of-type(n)` — n-ésimo de su tipo
-**Ubicación:** Dentro del `<section>` con párrafos.
+✅ Selector por tipo de atributo
+css
+Copiar
+Editar
+input[type="email"] {
+  border: 2px solid blue;
+}
+🧠 Qué hace: selecciona <input> que tenga el tipo email.
 
-✅ El segundo `<p>` se ve en color púrpura y cursiva.
+✅ Selector hermano adyacente
+css
+Copiar
+Editar
+h2 + p {
+  color: green;
+  font-style: italic;
+}
+🧠 Qué hace: selecciona el primer <p> que esté inmediatamente después de un <h2>.
 
-📌 *Explicación:* `p:nth-of-type(2)` selecciona el segundo elemento `<p>`, sin importar otros hijos de distinto tipo.
+✅ Selector de hermanos generales
+css
+Copiar
+Editar
+li ~ li {
+  color: purple;
+}
+🧠 Qué hace: selecciona todos los <li> que sean hermanos del primero dentro del mismo <ul>.
 
----
+✅ Selector descendiente
+css
+Copiar
+Editar
+section p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+🧠 Qué hace: selecciona todos los <p> dentro de un <section>, sin importar cuán profundo estén.
 
-## 🔹 4. `:hover` — Al pasar el mouse
-**Ubicación:** En el enlace.
+✅ Selector de hijo directo
+css
+Copiar
+Editar
+ul > li {
+  text-transform: uppercase;
+}
+🧠 Qué hace: selecciona solo los <li> que son hijos directos de un <ul>.
 
-🖱 Pasá el cursor sobre el enlace.
+✅ Selector universal
+css
+Copiar
+Editar
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+🧠 Qué hace: aplica estilos a todos los elementos del documento.
 
-✅ Cambia a color naranja y se subraya.
+🔹 2. Pseudo-clases
+✅ Dinámicas
+css
+Copiar
+Editar
+button:hover {
+  background-color: orange;
+  cursor: pointer;
+}
 
-📌 *Explicación:* `a:hover` se activa cuando el cursor está encima del enlace.
+a:active {
+  color: red;
+}
+🧠 :hover: cuando pasamos el mouse por encima.
+🧠 :active: cuando el enlace está siendo clickeado.
 
----
+✅ Estructurales
+css
+Copiar
+Editar
+li:nth-child(2) {
+  color: magenta;
+}
 
-## 🔹 5. `:active` — Al hacer clic
-**Ubicación:** En el botón.
+p:nth-of-type(1) {
+  background-color: lightblue;
+}
+🧠 nth-child(2): selecciona el segundo hijo (sin importar el tipo de etiqueta).
+🧠 nth-of-type(1): selecciona el primer elemento del tipo especificado (por ejemplo, el primer <p>).
 
-🖱 Hacé clic y mantenelo presionado.
+✅ Validación y estado de formulario
+css
+Copiar
+Editar
+input:valid {
+  border: 2px solid green;
+}
 
-✅ El botón se achica y cambia el fondo.
+input:invalid {
+  border: 2px solid red;
+}
 
-📌 *Explicación:* `button:active` aplica estilo **mientras se hace clic**.
+input:placeholder-shown {
+  color: gray;
+  font-style: italic;
+}
+🧠 :valid y :invalid: se activan cuando un campo del formulario cumple o no con su tipo/validación.
+🧠 :placeholder-shown: se aplica cuando el input está vacío y se muestra el placeholder.
 
----
+❓ Preguntas de reflexión
+1. ¿Qué selector usaste para estilizar el segundo elemento de una lista?
+Respuesta:
+li:nth-child(2), que selecciona el segundo hijo de la lista.
 
-## 🔹 6. `:focus` — Al enfocar un input
-**Ubicación:** En el campo de texto.
+2. ¿Qué sucede si cambias nth-child por nth-of-type?
+Respuesta:
 
-🖱 Hacé clic dentro del input.
+nth-child(n) selecciona al n-ésimo hijo sin importar el tipo de etiqueta.
 
-✅ Se dibuja un borde azul.
+nth-of-type(n) selecciona al n-ésimo elemento del tipo específico (por ejemplo, el segundo <p> aunque no sea el segundo hijo).
 
-📌 *Explicación:* `input:focus` se activa cuando el campo recibe el foco.
+Ejemplo:
 
----
+html
+Copiar
+Editar
+<div>
+  <p>Uno</p>
+  <span>Texto</span>
+  <p>Dos</p>
+</div>
+p:nth-child(2) → ❌ No selecciona nada (porque el segundo hijo es un <span>).
 
-## 🔹 7. `:target` — Enlace anclado
-**Ubicación:** En el link "Ver más información".
+p:nth-of-type(2) → ✅ Selecciona el segundo <p>.
 
-🖱 Hacé clic en el enlace.
+3. ¿Qué ventajas tiene usar selectores avanzados y pseudo-clases en lugar de clases tradicionales?
+Respuesta:
 
-✅ Se resalta el bloque con fondo amarillo.
+Permiten un CSS más inteligente y limpio.
 
-📌 *Explicación:* `#info:target` aplica estilo cuando el elemento con id `info` es el destino de un enlace.
+Se adaptan a la estructura del HTML, reduciendo la necesidad de muchas clases.
 
----
+Facilitan la interactividad sin JavaScript (:hover, :focus, etc.).
 
-## 🔹 8. `:checked` — Elemento marcado
-**Ubicación:** Casilla de verificación.
+Hacen el código más semántico y reutilizable.
 
-🖱 Marcá el checkbox.
-
-✅ El `label` se pone verde con texto blanco.
-
-📌 *Explicación:* `input[type="checkbox"]:checked + label` aplica estilo al `label` cuando el `checkbox` está marcado.
-
----
-
-## 🔹 9. `:valid / :invalid` — Validación del input
-**Ubicación:** En el campo de email.
-
-🖱 Probá escribir:
-- Una dirección válida (`ej@ej.com`) → ✅ borde verde.
-- Una inválida (`texto`) → ❌ borde rojo.
-
-📌 *Explicación:* El navegador aplica validación HTML5; CSS lo resalta con `:valid` y `:invalid`.
-
----
-
-## 🔹 10. `:placeholder-shown` — Mientras el placeholder está visible
-**Ubicación:** En el input de texto con placeholder.
-
-✅ Mientras no escribas nada, el texto es gris.
-
-📌 *Explicación:* `input:placeholder-shown` aplica estilo solo cuando el placeholder es visible (es decir, el campo está vacío).
-
----
-
+Ayudan a mantener el HTML más liviano y legible.
 

@@ -1,121 +1,104 @@
+/* 🌐 Selector universal: aplica a todos los elementos */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
 
-    /* ::before y ::after 
-       Añade contenido antes y después del <h1> sin modificar el HTML */
-    h1::before {
-      content: "⭐ ";
-    }
+/* 🎯 Estilo básico del body */
+body {
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
 
-    h1::after {
-      content: " ⭐";
-    }
+/* 🧭 Estilo del header y navegación */
+header {
+  background-color: #0d6efd;
+  color: white;
+  padding: 20px;
+  margin-bottom: 30px;
+}
 
-    /* :not(selector) 
-       Selecciona todos los botones que NO tienen la clase .primary */
-    button:not(.primary) {
-      background-color: lightgray;
-      color: black;
-    }
+header h1 {
+  margin-bottom: 10px;
+}
 
-    /* :nth-child(n) 
-       Selecciona el segundo <li> hijo dentro del <ul> */
-   ol li:nth-child(2) {
-      color: blue; 
-       font-weight: bold; 
-    }
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
 
-    li:nth-child(3) {
-      font-size: 40px;
-       font-weight: bold; 
-    }
+nav li a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
 
-    /* :nth-of-type(n) 
-       Selecciona el segundo <p> dentro del <section> (sin importar hijos de otro tipo) */
-    section p:nth-of-type(2) {
-      color: purple;
-      font-style: italic;
-    }
+/* 🧪 Pseudo-clase :hover para cambiar el color al pasar el mouse */
+nav li a:hover {
+  background-color: #0a58ca;
+}
 
-    /* :hover 
-       Aplica estilos cuando el usuario pasa el mouse por encima del enlace */
-   
+/* 🧩 Secciones */
+section {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
+}
 
-    /* :active 
-       Aplica estilos cuando se hace clic en el botón (estado activo) */
-    button:active {
-      transform: scale(0.55);
-      background-color: rgb(26, 14, 119);
-    }
+/* 🎯 Selector descendente: aplica a botones dentro de secciones */
+section button {
+  background-color: #198754;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
 
-    /* :focus 
-       Estiliza un campo de entrada cuando recibe el foco (el cursor está dentro) */
-    input:focus {
-      outline: 2px solid rgb(41, 32, 217);
-    }
+/* 🚀 Pseudo-clase :hover en botones */
+section button:hover {
+  background-color: #157347;
+}
 
-    /* :target 
-       Aplica estilos al elemento que es objetivo de un enlace con #id */
-    #info:target {
-      background-color: rgb(189, 100, 195);
-      padding: 1em;
-      border-radius: 6px;
-    }
+/* 📌 Selector de atributo: selecciona inputs con placeholder visible */
+input:placeholder-shown {
+  border: 2px dashed #ffc107;
+}
 
-    /* :checked 
-       Aplica estilo al <label> si su checkbox está marcado */
-    input[type="checkbox"]:checked+label {
-      background-color: green;
-      color: white;
-      padding: 0.2em 0.5em;
-      border-radius: 4px;
-    }
+/* ✅ :valid y ❌ :invalid: permiten validar campos */
+input:valid {
+  border: 2px solid green;
+}
 
-    /* :valid 
-       Aplica estilo a campos válidos (por ejemplo, un email bien escrito) */
-    input:valid {
-      border: 2px solid green;
-    }
+input:invalid {
+  border: 2px solid red;
+}
 
-    /* :invalid 
-       Aplica estilo a campos inválidos (por ejemplo, un email mal escrito) */
-    input:invalid {
-      border: 2px solid red;
-    }
+ul {
+    padding: 20px;
+}
+/* 🧮 nth-child para aplicar estilo al segundo elemento */
+ul li:nth-child(2) {
+  font-weight: bold;
+  color: #0d6efd;
+}
 
-    /* :placeholder-shown 
-       Aplica estilo mientras el campo muestra el texto del placeholder */
-    input:placeholder-shown {
-      color: gray;
-    }
+/* 🧼 :not(): selecciona todos los botones que NO tengan la clase .skip */
+button:not(.skip) {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
 
-    button[class~=primary] {
-      width: 500px;
-    }
-    a[href^="https://"] {
-      font-size: 100px;
-    }
-   a:hover {
-      color: orange;
-      text-decoration: underline;
-      font-size: 50px;
-    }
-
-    h1+h2 {
-      background-color: rgb(68, 211, 45);
-    }
-
-    a ~ h2{
-      background-color: yellow;
-    }
-    div div p{
-      background-color: aqua;
-    }
-
-    ol > li {
-      background-color: crimson;
-    }
-
-     /* p:nth-of-type(1){
-      background-color: darkmagenta;
-    } */
-
-  
+/* 📎 Adjacent sibling selector: aplica al párrafo que sigue a h2 */
+h2 + p {
+  font-style: italic;
+  color: #6c757d;
+}

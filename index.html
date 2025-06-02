@@ -1,110 +1,79 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSS Avanzado - Clase 12</title>
   <link rel="stylesheet" href="styles.css" />
-  <title>Pseudo-clases CSS</title>
 </head>
-
 <body>
-  <a href="#info">Ver más información</a>
-  <h1>Pseudo-clases en acción</h1>
+  
+  <header>
+    <h1>Bienvenidas/os al Mundo de los Selectores</h1>
+    <nav>
+      <ul>
+        <li><a href="#section1">Inicio</a></li>
+        <li><a href="#section2">Acerca</a></li>
+        <li><a href="#section3">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <h2>1. :not()</h2>
-  <button class="primary">Botón primario</button>
-  <button>Botón secundario</button>
+  <main>
+    <section id="section1">
+      <h2>Inicio</h2>
+      <p>Este es un ejemplo de cómo usar <strong>selectores avanzados</strong>.</p>
+      <article>
+        <h3>📚 Teoría: Selectores Avanzados</h3>
+        <ul>
+          <li><strong>Selectores de atributos:</strong> permiten aplicar estilos a elementos según los atributos que tengan. Ej: <code>a[href^="#"]</code></li>
+          <li><strong>Selectores de jerarquía:</strong> aplican estilos según la relación entre elementos. Ej: <code>h2 + p</code> o <code>ul > li</code></li>
+          <li><strong>Selector universal:</strong> selecciona todos los elementos del documento con <code>*</code></li>
+        </ul>
+      </article>
+      <button>Haz clic aquí</button>
+    </section>
 
-  <h2>2. :nth-child()</h2>
-  <ul>
-    <li>Primer elemento</li>
-    <li>Segundo elemento (resaltado)</li>
-    <li>Tercer elemento</li>
-  </ul>
+    <section id="section2">
+      <h2>Acerca</h2>
+      <p>Explora los selectores y pseudo-clases en CSS.</p>
+      <ul>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+      </ul>
 
-  <ol>
-    <li>Primer elemento</li>
-    <li>Segundo elemento</li>
-    <li>Tercer elemento</li>
-  </ol>
-  <h2>3. :nth-of-type()</h2>
-  <section>
-    <p>Primer párrafo</p>
-    <p>Segundo párrafo (estilo aplicado)</p>
-    <p>Tercer párrafo</p>
-  </section>
+      <article>
+        <h3>📚 Teoría: Pseudo-clases</h3>
+        <ul>
+          <li><strong>:hover</strong>: se activa al pasar el mouse sobre un elemento.</li>
+          <li><strong>:nth-child(n)</strong>: selecciona el elemento número <em>n</em> dentro de su contenedor padre.</li>
+          <li><strong>:valid / :invalid</strong>: permiten estilizar campos de formulario según si son válidos o no.</li>
+          <li><strong>:placeholder-shown</strong>: aplica estilos cuando el placeholder está visible.</li>
+          <li><strong>:not()</strong>: permite excluir elementos de un estilo.</li>
+        </ul>
+      </article>
+    </section>
 
-  <h2>4. :hover</h2>
-  <a href="#">Pasá el mouse por este enlace</a>
+    <section id="section3">
+      <h2>Contacto</h2>
+      <form>
+        <p><strong>📌 Tip:</strong> Este formulario mostrará bordes verdes si el email es válido y rojos si no lo es, gracias a <code>:valid</code> y <code>:invalid</code>.</p>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Escribe tu correo">
+        <button type="submit">Enviar</button>
+      </form>
 
-  <h2>5. :active</h2>
-  <button>Haz clic aquí</button>
-
-  <h2>6. :focus</h2>
-  <input type="text" placeholder="Escribe algo..." />
-
-  <h2>7. :target</h2>
-
-  <div id="info">
-    <p>Este bloque se resalta si hacés clic en el enlace "Ver más información" Lorem ipsum dolor sit amet consectetur
-      adipisicing elit. Nemo molestias magni laudantium? Accusamus expedita, blanditiis eligendi fuga error iusto
-      quisquam repellat porro corporis est at sint mollitia laboriosam libero architecto nihil. Sit ducimus ea nobis
-      repellendus esse omnis, blanditiis pariatur soluta ut, voluptatem illo quia quas architecto porro? Assumenda fuga
-      cum, saepe eveniet qui dolorem voluptates magnam perspiciatis minus. Quam, laboriosam. Fuga consequatur explicabo
-      cupiditate quae, nulla cum iusto quasi deleniti ullam? Quam ipsa tempora quidem, dignissimos, illum corrupti
-      veritatis tenetur iste amet, ea sapiente in enim blanditiis. Atque reiciendis eaque voluptatem corporis a officiis
-      illum enim! Ullam doloribus nam illo quis commodi, cupiditate magnam ut, fugit cum accusamus quos soluta magni
-      veritatis maiores ducimus quas esse? Optio quae explicabo obcaecati repellendus sunt itaque consequuntur, vitae
-      quis voluptatum quos eos distinctio vero sed quibusdam fugit possimus, cupiditate accusamus, totam assumenda ipsam
-      facere! Porro iure aut suscipit ducimus voluptatem ipsam quis fugit, ut quidem officia veniam autem doloribus
-      excepturi a numquam dolore nisi temporibus. Soluta distinctio ut veniam debitis asperiores, accusantium, vero
-      earum nemo, ad consectetur voluptatem similique a! Id ut recusandae rerum esse eveniet dolor ad. Ad ullam mollitia
-      ut adipisci? Ex fuga unde exercitationem doloremque temporibus praesentium. Necessitatibus, nobis. Nemo quae enim
-      vel blanditiis voluptatem soluta? Unde voluptatem, repellat obcaecati ipsam quasi tempore fuga magni provident,
-      dolorem officia libero rerum dignissimos, quidem odit ratione deserunt vero itaque at praesentium! Laboriosam nemo
-      tempore officiis quis? Maiores, ipsum voluptatum numquam quisquam corporis dolores officiis ipsam nam accusantium,
-      incidunt quibusdam, dolorem aspernatur! Amet, corporis ullam doloribus autem voluptates sunt expedita odit aperiam
-      debitis excepturi quia voluptas porro! Cumque excepturi molestiae veritatis ab incidunt reprehenderit distinctio
-      magni nesciunt maxime deleniti harum numquam maiores, officia dignissimos mollitia! Repellendus delectus eius
-      perspiciatis quae consequatur tenetur officiis accusantium, enim quas sunt voluptate minima vel. At nemo officiis
-      explicabo repellendus sed vel nobis deleniti. Esse temporibus rem quibusdam dolores vero voluptate ut ratione
-      tenetur ipsum consequuntur, voluptatibus ullam beatae porro iure, sit omnis obcaecati dolorem asperiores nulla
-      molestiae unde officiis neque quisquam expedita! Saepe praesentium fugiat molestiae enim, ipsum eveniet dicta
-      necessitatibus adipisci, iure, voluptates dolorum ut ratione voluptas tempora quod dolor tenetur? Odio aliquam
-      iste esse possimus reiciendis earum repellendus quas? Quisquam commodi neque consequuntur. Provident corporis
-      totam deserunt laborum animi in atque ipsa fuga quibusdam non quod consectetur, nesciunt dicta, fugit quo nihil
-      impedit illum natus soluta. Commodi culpa reprehenderit animi maxime, suscipit eius tempore inventore nihil
-      pariatur laboriosam modi atque, corrupti dolore facilis magnam cum. Necessitatibus pariatur ea delectus dolor
-      soluta totam consequatur maxime neque voluptates? In dolorum, blanditiis nesciunt iste adipisci velit sed debitis
-      reiciendis possimus neque quod, doloremque sequi eaque quo magni ullam alias, veniam dolorem voluptatem fugiat
-      sapiente corrupti? Facilis hic, repellendus quos debitis delectus optio culpa quam aliquam dolor modi voluptatum
-      deleniti nobis consequatur corrupti dolorum nisi pariatur reprehenderit ad voluptate veritatis magnam quisquam
-      rem, earum tempore. Veritatis voluptate, error sit consequatur recusandae nesciunt temporibus amet nobis omnis nam
-      laborum nulla fuga voluptatum rem enim sunt dolorum harum eaque? Natus.</p>
-  </div>
-
-  <h2>8. :checked</h2>
-  <input type="checkbox" id="check1" />
-  <label for="check1">Opción marcada</label>
-
-  <div>
-    <a href="https://docs.google.com/presentation/d/1AWPjHQde=id.p7">link
-      1
-    </a>
-    <div>
-      <p>soy un párrafo hijo de div div</p>
-    </div>
-    <h2>9. :valid / :invalid</h2>
-    <input type="text" placeholder="Ingresa tu email" minlength="6" required />
-    <input type="email" placeholder="Ingresa tu email" required />
-    <h2>10. :placeholder-shown</h2>
-    <a href="hpte://docs.google.com/presentation/d/1AWPjHQfYp7#slide=id.p7">link2</a>
-    <h2>10. :placeholder-shown</h2>
-    <label for="focus">click para focus</label>
-    <input id="focus" type="text" placeholder="Este texto desaparece al escribir" />
-  </div>
-
+      <article>
+        <h3>📚 Evaluación Final</h3>
+        <p>Interactúa con la página y reflexiona:</p>
+        <ul>
+          <li>¿Qué selector usaste para estilizar el segundo elemento de una lista?</li>
+          <li>¿Qué sucede si cambias <code>nth-child</code> por <code>nth-of-type</code>?</li>
+          <li>¿Qué ventajas tiene usar selectores avanzados y pseudo-clases frente a clases tradicionales?</li>
+        </ul>
+      </article>
+    </section>
+  </main>
 </body>
-
 </html>
