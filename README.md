@@ -1,183 +1,94 @@
-# 🌟 Selectores Avanzados y Pseudo-clases en CSS
 
-## 🎯 Objetivo de la Actividad
+# 🧭 Guía de CSS: Position, Float y Clear
 
-Crear un mini sitio web con estilos avanzados aplicando los conceptos de:
-
-* Selectores avanzados (atributos, jerarquías, universales).
-* Pseudo-clases dinámicas y estructurales.
+Este proyecto contiene ejemplos prácticos y explicaciones claras sobre las propiedades de **`position`**, **`float`** y **`clear`** en CSS. Ideal para entender cómo se comportan estos elementos en el flujo del documento.
 
 ---
 
-## 📘 Teoría y Ejemplos
+## 📌 1. Position en CSS
 
-### 🔹 1. Selectores Avanzados
+### 🔹 Tipos de `position`
 
-#### ✅ Selector de atributo
+| Valor     | ¿Respecto a qué se posiciona?                   | Se mantiene en el flujo |
+|-----------|--------------------------------------------------|--------------------------|
+| `static`  | Es el valor por defecto. Sigue el flujo normal. | ✅ Sí                   |
+| `relative`| A sí mismo. Permite moverlo desde su posición.  | ✅ Sí                   |
+| `absolute`|Permite moverlo desde el borde sup izq dfel contenedor
+| `fixed`   | A la ventana (viewport). No se mueve al hacer scroll. | ❌ No |
+| `sticky`  | Es estático hasta cierto punto, luego se fija al scroll. | ✅ Parcialmente |
 
-```css
-a[href^="#"] {
-  color: teal;
-  font-weight: bold;
-}
-```
+---
 
-🧠 *Qué hace:* selecciona todos los `<a>` que tengan un atributo `href` que comience con `#`.
+### ✅ Ejemplo comparativo: `fixed` vs `sticky`
 
-#### ✅ Selector por tipo de atributo
+```html
+<div class="fixed">🔴 Fixed</div>
+<div class="sticky">🔵 Sticky</div>
 
-```css
-input[type="email"] {
-  border: 2px solid blue;
-}
-```
-
-🧠 *Qué hace:* selecciona `<input>` que tenga el tipo `email`.
-
-#### ✅ Selector hermano adyacente
-
-```css
-h2 + p {
-  color: green;
-  font-style: italic;
-}
-```
-
-🧠 *Qué hace:* selecciona el primer `<p>` que esté inmediatamente después de un `<h2>`.
-
-#### ✅ Selector de hermanos generales
-
-```css
-li ~ li {
-  color: purple;
-}
-```
-
-🧠 *Qué hace:* selecciona todos los `<li>` que sean hermanos del primero dentro del mismo `<ul>`.
-
-#### ✅ Selector descendiente
-
-```css
-section p {
-  font-size: 18px;
-  line-height: 1.5;
-}
-```
-
-🧠 *Qué hace:* selecciona todos los `<p>` dentro de un `<section>`, sin importar cuán profundo estén.
-
-#### ✅ Selector de hijo directo
-
-```css
-ul > li {
-  text-transform: uppercase;
-}
-```
-
-🧠 *Qué hace:* selecciona solo los `<li>` que son hijos directos de un `<ul>`.
-
-#### ✅ Selector universal
-
-```css
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-```
-
-🧠 *Qué hace:* aplica estilos a todos los elementos del documento.
-
-### 🔹 2. Pseudo-clases
-
-#### ✅ Dinámicas
-
-```css
-button:hover {
-  background-color: orange;
-  cursor: pointer;
+.fixed {
+  position: fixed;
+  top: 20px;
+  left: 20px;
 }
 
-a:active {
-  color: red;
+.sticky {
+  position: sticky;
+  top: 10px;
 }
-```
+Explicación:
 
-🧠 `:hover`: cuando pasamos el mouse por encima.
+🔴 fixed: se mantiene siempre visible, sin importar el scroll. Se posiciona respecto al viewport.
 
-🧠 `:active`: cuando el enlace está siendo clickeado.
+🔵 sticky: se comporta como static hasta que el scroll lo empuja a top: 10px, donde se queda fijo dentro de su contenedor.
 
-#### ✅ Estructurales
+💡 2. Coordenadas y referencia
+Cuando usamos top, left, bottom, o right:
 
-```css
-li:nth-child(2) {
-  color: magenta;
-}
+En relative: se mueve desde su posición original.
 
-p:nth-of-type(1) {
+En absolute, fixed: se posiciona respecto al contenedor posicionado o al viewport.
+
+En sticky: comienza como flujo normal y se posiciona cuando se cumple la condición de scroll.
+
+🌊 3. Float y Clear
+🔹 ¿Qué hace float?
+Permite que un elemento se saque del flujo normal y flote a la izquierda o derecha.
+
+Los elementos siguientes fluyen al costado si hay espacio.
+
+🔹 ¿Qué hace clear?
+Restablece el flujo normal evitando que elementos flotantes se coloquen al lado.
+
+Valores posibles: left, right, both.
+
+✅ Ejemplo de float con clear
+html
+
+<div class="flotante">🔵 Flotante (float: left)</div>
+<div class="contenido">Texto que fluye al lado del flotante.</div>
+
+<div class="clear"></div>
+
+<div class="contenido">Texto que aparece debajo gracias a clear: left.</div>
+
+.flotante {
+  float: left;
+  width: 200px;
+  height: 100px;
   background-color: lightblue;
 }
-```
 
-🧠 `nth-child(2)`: selecciona el segundo hijo (sin importar el tipo de etiqueta).
-
-🧠 `nth-of-type(1)`: selecciona el primer elemento del tipo especificado (por ejemplo, el primer `<p>`).
-
-#### ✅ Validación y estado de formulario
-
-```css
-input:valid {
-  border: 2px solid green;
+.clear {
+  clear: left;
 }
 
-input:invalid {
-  border: 2px solid red;
-}
+Explicación:
 
-input:placeholder-shown {
-  color: gray;
-  font-style: italic;
-}
-```
+.flotante flota a la izquierda.
 
-🧠 `:valid` y `:invalid`: se activan cuando un campo del formulario cumple o no con su tipo/validación.
+El texto siguiente se acomoda al costado.
 
-🧠 `:placeholder-shown`: se aplica cuando el input está vacío y se muestra el placeholder.
+El div con clear: left fuerza al contenido a continuar por debajo, recuperando el flujo.
 
----
 
-## ❓ Preguntas de reflexión
 
-1. **¿Qué selector usaste para estilizar el segundo elemento de una lista?**
-
-   * **Respuesta:** `li:nth-child(2)`, que selecciona el segundo hijo de la lista.
-
-2. **¿Qué sucede si cambias `nth-child` por `nth-of-type`?**
-
-   * **Respuesta:**
-
-     * `nth-child(n)` selecciona al n-ésimo hijo sin importar el tipo de etiqueta.
-     * `nth-of-type(n)` selecciona al n-ésimo elemento del tipo específico (por ejemplo, el segundo `<p>` aunque no sea el segundo hijo).
-
-   **Ejemplo:**
-
-   ```html
-   <div>
-     <p>Uno</p>
-     <span>Texto</span>
-     <p>Dos</p>
-   </div>
-   ```
-
-   ```css
-   p:nth-child(2)   /* ❌ No selecciona nada (porque el segundo hijo es un <span>) */
-   p:nth-of-type(2) /* ✅ Selecciona el segundo <p> */
-   ```
-
-3. **¿Qué ventajas tiene usar selectores avanzados y pseudo-clases en lugar de clases tradicionales?**
-
-   * Permiten un CSS más inteligente y limpio.
-   * Se adaptan a la estructura del HTML, reduciendo la necesidad de muchas clases.
-   * Facilitan la interactividad sin JavaScript (`:hover`, `:focus`, etc.).
-   * Hacen el código más semántico y reutilizable.
-   * Ayudan a mantener el HTML más liviano y legible.

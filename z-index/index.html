@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title> z-index</title>
+  <style>
+    .container {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      border: 2px solid black;
+    }
+
+    .box1, .box2, .box3 {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    .box1 {
+      background-color: red;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    .box2 {
+      background-color: green;
+      top: 40px;
+      left: 40px;
+      z-index: 2;
+    }
+
+    .box3 {
+      background-color: blue;
+      top: 80px;
+      left: 80px;
+      z-index: 3;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Ejemplo de z-index</h2>
+  <div class="container">
+    <div class="box1">z-index: 1</div>
+    <div class="box2">z-index: 2</div>
+    <div class="box3">z-index: 3</div>
+  </div>
+<p> Explicación:
+Cada .box tiene un z-index distinto.
+
+Aunque se colocan en posiciones que se solapan, el que tiene mayor z-index (el azul con 3) aparece por encima de los demás.
+
+Si todos tuvieran el mismo z-index, el orden en el HTML determinaría cuál se ve arriba.</p>
+</body>
+</html>

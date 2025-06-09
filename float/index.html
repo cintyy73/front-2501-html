@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Elementos flotantes con clear</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .flotante {
+      float: left;
+      width: 200px;
+      height: 100px;
+      background-color: lightblue;
+      margin-right: 20px;
+      padding: 10px;
+    }
+
+    .contenido {
+      background-color: lightyellow;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+
+    .clear {
+      clear: left; /* No permite que haya elementos flotando a la izquierda */
+    }
+
+    .explicacion {
+      background-color: #eee;
+      padding: 10px;
+      margin-top: 20px;
+      border-left: 4px solid #999;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>🧱 Ejemplo de float y clear</h2>
+
+  <div class="flotante">🔵 Caja flotante (float: left)</div>
+
+  <div class="contenido">
+    Este párrafo se posiciona al lado del div flotante, ya que forma parte del flujo normal y el espacio a la izquierda ya está ocupado.
+  </div>
+
+  <!-- Línea para restablecer el flujo normal -->
+
+  <div class="contenido">
+    ✅ Este contenido se coloca debajo del elemento flotante, porque usamos <code>clear: left</code> para evitar que flote a su lado.
+  </div>
+
+  <div class="explicacion">
+    <h3>📌 Explicación</h3>
+    <ul>
+      <li>El elemento azul <strong>flota a la izquierda</strong>.</li>
+      <li>El primer bloque de texto se acomoda <strong>al costado</strong>.</li>
+      <li>El segundo bloque de texto tiene <code>clear: left</code>, por lo tanto <strong>se fuerza a bajar</strong> debajo de cualquier flotante a la izquierda.</li>
+
+    </ul>
+
+  <div class="flotante">🔵 Caja flotante (float: left)</div>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam alias doloremque quaerat velit ad quis odio, nobis eaque culpa assumenda expedita maiores fugiat possimus quod, officia incidunt nesciunt soluta sequi voluptates sint corrupti autem molestias. Quod vel inventore repellat minus laboriosam, optio placeat temporibus saepe molestias quis possimus amet itaque earum fugiat sapiente excepturi sed laudantium esse ut magnam aperiam minima facere dolores? At, facere quisquam numquam rem, fugiat quidem laudantium illo ratione id cum sit dolorem nesciunt dolor illum. Accusamus, eum ipsa? Suscipit beatae assumenda accusantium. Sit sequi repellendus voluptas perspiciatis consequatur omnis consectetur. Id illum ullam, quo in est nemo possimus reiciendis dolor, assumenda nesciunt cupiditate voluptas rem. Doloremque nemo totam laboriosam amet modi autem alias suscipit libero exercitationem asperiores iste temporibus perferendis enim consequuntur, labore beatae blanditiis consectetur dolorum aliquam illum. Odio vel adipisci quas placeat fugit aut eveniet fuga quae iure! Quia dolorum nesciunt illo possimus! Dignissimos aliquam fugiat eaque labore saepe nostrum eos ullam nobis placeat id, sint numquam adipisci quam laboriosam eligendi ipsam architecto repudiandae perferendis harum sequi suscipit repellat? Et nam vero, voluptatum molestiae eius saepe. Consequuntur, praesentium adipisci maiores facere magni quam odit excepturi veniam! Sit facilis mollitia perferendis voluptate obcaecati amet.</p>
+
+  </div>
+
+</body>
+</html>
+L
