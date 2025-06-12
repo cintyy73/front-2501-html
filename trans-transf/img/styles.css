@@ -1,0 +1,179 @@
+/* === General Styles === */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f0f0;
+  text-align: center;
+  padding: 2rem;
+}
+
+.content-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* === Button with transition === */
+.main-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s ease;
+}
+
+.main-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* === Card with transform === */
+.card-box {
+  margin: 30px auto;
+  padding: 40px;
+  width: 200px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease;
+  font-weight: bold;
+}
+
+.card-box:hover {
+  transform: rotate(5deg) scale(1.1);
+}
+
+/* === jemplos para nombrar clases de manera adecuadas === */
+.alert {
+  margin: 10px auto;
+  padding: 15px;
+  width: 80%;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.is-success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.is-error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* === Utility text styles === */
+.text-large {
+  font-size: 1.8rem;
+}
+
+.text-red {
+  color: red;
+}
+
+/* === Gallery === */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.image-card {
+  width: 220px;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease;
+}
+
+.image-card img {
+  width: 100%;
+  display: block;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+/* === Effects === */
+.effect-zoom:hover img {
+  transform: scale(2.5);
+  opacity: 0.9;
+}
+
+.effect-rotate:hover {
+  transform: rotate(30deg) scale(0.5);
+}
+
+.effect-slide:hover img {
+  transform: translateY(-20px);
+}
+
+.effect-combo:hover img {
+  transform: scale(1.5) rotate(50deg);
+}
+
+.effect-invert:hover img {
+  filter: invert(100%);
+}
+
+/* === Flip Card === */
+/* === 1. Escena 3D con perspectiva global === */
+.scene {
+  width: 500px;
+  height: 300px;
+  perspective: 1000px; /* Activa el efecto 3D */
+  margin: 100px auto;
+}
+
+/* === 2. Tarjeta con rotación fluida === */
+.flip-card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.flip-card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease-in-out;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+/* === 3. Activar rotación al hacer hover === */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* === 4. Caras delantera y trasera === */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Oculta la cara posterior cuando está girada */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+/* Cara frontal */
+.flip-card-front {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Cara trasera con rotación 180° */
+.flip-card-back {
+  background-color: #222;
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

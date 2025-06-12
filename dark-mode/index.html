@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🌞🌙 Tema Claro / Oscuro + Íconos</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="styFlesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/> 
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Iconify -->
+  <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+
+</head>
+<body>
+
+  <h1>🌞🌙 Tema Claro / Oscuro + Íconos</h1>
+  <p>Este ejemplo muestra cómo usar temas, fuentes y distintos tipos de íconos.</p>
+  <button onclick="document.body.classList.toggle('dark')">Cambiar Tema</button>
+
+  <h2>1. Font Awesome</h2>
+  <p><i class="fas fa-home icon-large"></i> Inicio</p>
+  <p><i class="fab fa-github icon-large"></i> GitHub</p>
+
+  <h2>2. Material Icons</h2>
+  <p><i class="material-icons">home</i> Inicio</p>
+  <p><i class="material-icons">email</i> Correo</p>
+
+  <h2>3. Iconify</h2>
+  <p><span class="iconify" data-icon="mdi:home"></span> Inicio</p>
+  <p><span class="iconify" data-icon="bi:calendar-check" style="color: orange;"></span> Calendario</p>
+
+  <h2>4. SVG Inline</h2>
+  <p>
+    <svg viewBox="0 0 24 24">
+      <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5z"/>
+    </svg>
+    Inicio (SVG personalizado)
+  </p>
+
+</body>
+</html>
